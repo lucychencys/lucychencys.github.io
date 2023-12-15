@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <title>Blog Post on text-wrap</title>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"
+    />
+    <!-- Google Fonts Roboto -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+    />
+    <!-- MDB -->
+    <link rel="stylesheet" href="css/mdb.min.css" />
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Prism.js Stylesheet -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism.min.css"
+      rel="stylesheet"
+    />
+    <!-- Prism.js Core Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
+
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/post.css" />
+  </head>
+  <body>
+    <!--Main Navigation-->
+    <header>
+      <!-- Jumbotron -->
+      <div id="intro" class="p-5 text-center header-div">
+        <h1 class="mb-0 h4">Blog Post on <strong>text-wrap: balance</strong></h1>
+      </div>
+      <!-- Jumbotron -->
+    </header>
+    <!--Main Navigation-->
+
+    <!--Main layout-->
+    <main class="mt-4 mb-5">
+      <div class="container">
+        <!--Grid row-->
+        <div class="row">
+          <!--Section: Text-->
+          <section>
+            <h2>0. Introduction</h2>
+            <p>
+              This blog explores a CSS property, <code>text-wrap: balance</code>, that
+              adjusts line-wrapping styles.
+            </p>
+
+            <!-- Grid row -->
+            <div class="row">
+              <!-- Grid column -->
+              <div class="col-lg-4 col-md-12 mb-lg-0 mb-4">
+                <!-- Card: What is it -->
+                <div class="card hoverable">
+                  <!-- Card image -->
+                  <img class="card-img-top" src="img/question.jpg">
+
+                  <!-- Card content -->
+                  <div class="card-body">
+                    <p>What is it?</p>
+                    <p class="card-title font-small mt-3 mb-2">
+                      <code>text-wrap</code> is a CSS property that determines
+                      how to break lines<br />
+                      <code>text-wrap: balance</code> wraps text to balance the
+                      length of lines.
+                    </p>
+                  </div>
+                </div>
+                <!-- Card -->
+              </div>
+              <!-- Grid column -->
+
+              <!-- Grid column -->
+              <div class="col-lg-4 col-md-6 mb-md-0 mb-4">
+                <!-- Card -->
+                <div class="card hoverable">
+                  <!-- Card image -->
+                  <img class="card-img-top" src="img/why.png">
+
+                  <!-- Card content -->
+                  <div class="card-body">
+                    <!-- Title -->
+                    <p>Why use it?</p>
+                    <!-- Text -->
+                    <p class="card-title font-small mt-3 mb-2">
+                      This property improves visual consistency of text blocks
+                      and can be useful to enhance readability.
+                      <br /><br />
+                    </p>
+                  </div>
+                </div>
+                <!-- Card -->
+              </div>
+              <!-- Grid column -->
+
+              <!-- Objective Grid Column -->
+              <div class="col-lg-4 col-md-6 mb-0">
+                <!-- Card -->
+                <div class="card hoverable">
+                  <!-- Card image -->
+                  <img class="card-img-top" src="img/limitation.png">
+
+                  <!-- Card content -->
+                  <div class="card-body">
+                    <!-- Title -->
+                    <p>Limitations</p>
+                    <!-- Text -->
+                    <p class="card-title font-small mt-3 mb-2">
+                      The algorithm is computationally expensive so it would
+                      only take effect for text under six lines.
+                      <br /><br />
+                    </p>
+                  </div>
+                </div>
+                <!-- Card -->
+              </div>
+              <!-- Grid column -->
+            </div>
+            <!-- Grid row -->
+
+            <hr />
+
+            <h2>1. What does <code>text-wrap: balance</code> do?</h2>
+
+            <!-- Grid row -->
+            <div class="row text-wrap-desciption">
+              <!-- Grid column -->
+              <div class="col-lg-6 col-md-12 mb-lg-0 mb-4">
+                Setting the text-wrap property to "balance" aims to balance the
+                empty space at the end of each line. It attempts to make the
+                lines as close to the same length as possible. This prevents
+                situations where lines in a text block have very different length.
+                <br />
+
+                <div class="text-wrap-demo-button-group">
+                  <div class="btn-group" role="group">
+                    <button
+                      type="button"
+                      id="showNormal"
+                      class="btn btn-raised btn-primary button-active"
+                    >
+                      text-wrap: wrap (default)
+                    </button>
+                    <button
+                      type="button"
+                      id="showBalance"
+                      class="btn btn-raised btn-primary"
+                    >
+                      text-wrap: balance
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-6 col-md-12 mb-lg-0 mb-4">
+                <div class="text-wrap-demo" id="text-wrap-demo">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Morbi sed sagittis odio, vel condimentum nisl. Aenean
+                    viverra lacinia eros, at molestie urna iaculis ac.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <hr />
+
+            <h2>2. text-wrap comparisons</h2>
+            <p>There are three commonly used values for text-wrap (wrap, pretty, and balance). Here's an example of text responds to the three styles.</p>
+            
+            <!-- Grid row -->
+            <div class="row">
+              <!-- Grid column -->
+              <div class="col-lg-4 col-md-12 mb-lg-0 mb-4">
+                <!-- Card -->
+                <div class="card hoverable">
+                  <!-- Card content -->
+                  <div class="card-body">
+                    <p><strong><u>text-wrap: wrap</u></strong></p>
+                    <p>
+                      Text is wrapped at the end of the container. (default)
+                      <br />
+                      <br />
+                    </p>
+                    <hr />
+                    <div class="text-wrap-default">
+                      Result:
+                      <br>
+                      <!-- <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Morbi sed sagittis odio, vel condimentum nisl. Autem
+                        adipisci totam sit consequuntur eligendi.
+                      </p> -->
+                      <img src="img/default.png" style="height: 150px;"/>
+                    </div>
+                  </div>
+                </div>
+                <!-- Card -->
+              </div>
+              <!-- Grid column -->
+
+              <!-- Grid column -->
+              <div class="col-lg-4 col-md-6 mb-md-0 mb-4">
+                <!-- Card -->
+                <div class="card hoverable">
+                  <!-- Card content -->
+                  <div class="card-body">
+                    <p><strong><u>text-wrap: pretty</u></strong></p>
+                    <p>
+                      Text is wrapped to prevent single word on its own on a
+                      line.
+                      <br />
+                      &star; Preferred on paragraph text.
+                    </p>
+
+                    <hr />
+
+                    <div class="text-wrap-pretty">
+                      Result:
+                      <br>
+                      <!-- <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Morbi sed sagittis odio, vel condimentum nisl. Autem
+                        adipisci totam sit consequuntur eligendi.
+                      </p> -->
+                      <img src="img/pretty.png" style="height: 150px;"/>
+                    </div>
+                  </div>
+                </div>
+                <!-- Card -->
+              </div>
+              <!-- Grid column -->
+
+              <!-- Grid Column -->
+              <div class="col-lg-4 col-md-6 mb-0">
+                <!-- Card -->
+                <div class="card hoverable">
+                  <!-- Card content -->
+
+                  <div class="card-body">
+                    <p><strong><u>text-wrap: balance</u></strong></p>
+                    <p>
+                      Text is wrapped to balance the length of lines.
+                      <br />
+                      &star; Preferred on headings and captions.
+                    </p>
+                    <hr />
+
+                    <div class="text-wrap-balance">
+                      Result:
+                      <br>
+                      <!-- <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Morbi sed sagittis odio, vel condimentum nisl. Autem
+                        adipisci totam sit consequuntur eligendi.
+                      </p> -->
+                      <img src="img/balance.png" style="height: 150px;"/>
+                    </div>
+                  </div>
+                </div>
+                <!-- Card -->
+              </div>
+              <!-- Grid column -->
+            </div>
+            <!-- Grid row -->
+
+            <p class="note note-dark">
+              <strong>Note:</strong> Text wrapping responds differently based on screen size. So, the results below are provided in images.
+            </p>
+
+            <hr />
+
+            <h2>3. How to use it?</h2>
+            <!-- Grid row -->
+            <div class="row">
+              <!-- Grid column -->
+              <div class="col-lg-6 col-md-12 mb-lg-0 mb-4">
+                <pre
+                  class="language-html"
+                  tabindex="0"
+                  data-language="HTML"
+                ><header><span>HTML</span></header><code class="language-html code-block"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text-wrap-balance<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+  Lorem ipsum dolor sit amet, 
+  consectetur adipiscing elit.
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">&gt;</span></span></code></pre>
+              </div>
+              <!-- Grid column -->
+
+              <!-- Grid column -->
+              <div class="col-lg-6 col-md-6 mb-md-0 mb-4">
+                <pre
+                  class="language-css"
+                  tabindex="0"
+                  data-language="CSS"
+                ><header><span>CSS</span></header><code class="language-css code-block"><span class="token selector">.text-wrap-balance</span><span class="token punctuation">{</span>
+  <span class="token property">text-wrap</span><span class="token punctuation">:</span>balance<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code>
+            </pre>
+              </div>
+              <!-- Grid column -->
+            </div>
+            <!-- Grid row -->
+          </section>
+          <!--Section: Text-->
+        </div>
+        <!--Grid row-->
+      </div>
+    </main>
+    <!--Main layout-->
+
+    <!--Footer-->
+    <footer class="bg-light text-lg-start">
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2); color: black;">
+        © 2023 Copyright: Yanshi (Lucy) Chen
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!--Footer-->
+    <!-- MDB -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!-- Custom scripts -->
+    <script type="text/javascript" src="js/script.js"></script>
+  </body>
+</html>

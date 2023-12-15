@@ -1,0 +1,105 @@
+body {
+  background-color: hsl(220deg 17% 22%);
+  color: hsl(215deg 19% 85%);
+  /* font-family: var(--font-family); */
+  font-size: clamp(16px, calc(0.7em + 0.75vw), 20px);
+}
+
+
+.header-div{
+    background-color: hsl(220deg, 17%, 30%);
+    color: hsl(215deg 19% 85%);
+}
+
+hr {
+    margin: 3rem 0;
+}
+
+#intro {
+  /* Margin to fix overlapping fixed navbar */
+  margin-top: 58px;
+}
+
+@media (max-width: 991px) {
+  #intro {
+    /* Margin to fix overlapping fixed navbar */
+    margin-top: 45px;
+  }
+}
+
+.text-wrap-demo {
+    /* width: 40%; */
+    background: hsl(220deg 17% 19%);
+    border-radius: 1rem;
+}
+
+.text-wrap-balance-demo {
+    background: hsl(220deg 17% 19%);
+    border-radius: 1rem;
+    text-wrap: balance;
+}
+
+.text-wrap-demo, p {
+    padding: 1rem;
+}
+.text-wrap-balance-demo, p {
+    padding: 1rem;
+}
+.card-body {
+    background: hsl(220deg 17% 19%);
+}
+.card-body, p {
+    color: hsl(215deg 19% 85%);
+}
+.card-body hr{
+    margin: 1rem 0;
+}
+
+.text-wrap-desciption .btn-primary{
+    background: hsl(220deg, 17%, 50%);
+}
+
+.text-wrap-desciption .btn-primary.focus, .btn-primary:focus, .btn-primary:hover {
+    color: #fff;
+    background-color: hsl(220deg, 17%, 30%);
+}
+
+.text-wrap-demo-button-group {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.button-active{
+    background: hsl(220deg, 17%, 30%) !important;
+}
+
+.text-wrap-default {
+    background: hsl(220deg 17% 19%);
+    padding: 0.2rem;
+}
+.text-wrap-balance {
+    background: hsl(220deg 17% 19%);
+    padding: 0.2rem;
+    text-wrap: balance;
+}
+.text-wrap-pretty {
+    background: hsl(220deg 17% 19%);
+    text-wrap: pretty;
+    padding: 0.2rem;
+}
+/* .card code{
+    background: hsl(43, 86%, 94%, 80%);
+    border-radius: 0.5rem;
+    padding: 0.3rem;
+} */
+
+.card img{
+    height: 200px;
+    object-fit: contain;
+}
+
+.note-dark {
+    background: hsl(220deg, 17%, 30%);
+    margin-top: 1rem;
+}

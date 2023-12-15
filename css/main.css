@@ -1,0 +1,108 @@
+:root {
+  --color-primary: hsl(92deg 28% 65%);
+  --color-secondary: hsl(193deg 60% 73%);
+  --color-tertiary: hsl(40deg 71% 73%);
+  --color-text: hsl(218deg 27% 94%);
+  --color-text-offset-dark1: hsl(215deg 19% 89%);
+  --color-text-offset-dark2: hsl(215deg 19% 85%);
+  --color-text-offset-dark3: hsl(215deg 19% 70%);
+  --color-border: hsl(220deg 12% 40%);
+  --color-border-offset-dark: hsl(220deg 12% 25%);
+  --color-background: hsl(220deg 17% 22%);
+  --color-background-offset-dark: hsl(220deg 17% 19%);
+  --color-background-offset-light: hsl(220deg, 17%, 25%);
+}
+:root {
+  --spacing-none: 0;
+  --spacing-xxs: 0.25rem;
+  --spacing-xs: 0.5rem;
+  --spacing-s: 0.75rem;
+  --spacing-m: 1rem;
+  --spacing-l: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-xxl: 4rem;
+  --spacing-xxxl: 6rem;
+}
+/* code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo,
+    monospace;
+  font-size: 1em;
+} */
+a,
+button,
+input,
+textarea,
+summary,
+pre {
+  --outline-size: max(2px, 0.08em);
+  --outline-style: solid;
+  --outline-color: var(--color-secondary);
+  --outline-offset: 2px;
+}
+:is(a, button, input, textarea, summary, pre):focus {
+  outline: var(--outline-size) var(--outline-style) var(--outline-color);
+  outline-offset: var(--outline-offset, var(--outline-size));
+}
+:is(a, button, input, textarea, summary, pre):focus-visible {
+  outline: var(--outline-size) var(--outline-style) var(--outline-color);
+  outline-offset: var(--outline-offset, var(--outline-size));
+}
+:is(a, button, input, textarea, summary, pre):focus:not(:focus-visible) {
+  outline: none;
+}
+/* code[class*="language-"], */
+/* pre[class*="language-"] {
+  color: #f8f8f2;
+  background: none;
+  font-family: "Fira Code", Consolas, Monaco, "Andale Mono", "Ubuntu Mono",
+    monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+} */
+pre[class*="language-"] {
+  padding: 1em;
+  margin: 0.5em 0;
+  overflow: auto;
+  border-radius: 0.3em;
+}
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  background: var(--color-background-offset-dark);
+}
+:not(pre) > code[class*="language-"] {
+  padding: 0.1em;
+  border-radius: 0.3em;
+  white-space: normal;
+}
+code {
+  font-family: var(--font-family-monospace);
+  overflow-wrap: break-word;
+}
+:is(h1, h2, h3, h4, h5, h6) code {
+  font-size: 0.85em;
+}
+p code {
+  font-size: 0.9em;
+}
+pre code {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.code-block, pre{
+    text-shadow: none !important;
+    color: hsl(215deg 19% 85%) !important;
+}

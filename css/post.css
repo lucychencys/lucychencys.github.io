@@ -1,0 +1,50 @@
+pre[data-language] {
+  position: relative;
+  padding: 0 var(--spacing-m) var(--spacing-xl) var(--spacing-m);
+  border-radius: 8px;
+  border-top: none;
+  color: var(--color-text);
+  margin-block-end: var(--spacing-xl);
+}
+pre[data-language] header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  display: grid;
+  width: 100%;
+  font-family: var(--font-family);
+  grid-template-columns: min-content 1fr;
+  margin-block-end: var(--spacing-l);
+}
+pre[data-language] header span {
+  padding: var(--spacing-xs) var(--spacing-m);
+  border-radius: 8px 8px 0 0;
+  background-color: var(--color-background-offset-dark);
+  border-block-end: 1px solid var(--color-primary);
+  font-weight: var(--fw-bold);
+  padding-block-start: var(--spacing-m);
+}
+pre[data-language] button {
+  align-self: end;
+  padding: 0.5rem;
+  border: none;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  margin: 0.25rem 0;
+  color: var(--color-text);
+  cursor: pointer;
+  font-size: var(--font-size-s);
+  justify-self: end;
+}
+code[class*="language-"] {
+  border-radius: 8px;
+  margin: var(--spacing-m) 0;
+  font-family: var(--font-family-monospace);
+}
+pre::-webkit-scrollbar {
+  width: 2px;
+  height: 2px;
+}
+pre::-webkit-scrollbar-track {
+  background: none;
+}
